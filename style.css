@@ -58,10 +58,10 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.header-main {
+/* .header-main {
   padding-top: 25px;
   padding-bottom: 23px;
-}
+} */
 .mobile-menu-open {
   background-color: transparent;
   border: none;
@@ -139,6 +139,8 @@ body {
 }
 .header-main {
   border-bottom: 1px solid var(--border-cards);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-nav-container {
   display: flex;
@@ -148,10 +150,7 @@ body {
   display: flex;
   align-items: center;
 }
-.header-list {
-  display: flex;
-  align-items: center;
-}
+
 .header-logo {
   margin-right: 76px;
 }
@@ -174,30 +173,13 @@ body {
   margin-right: 40px;
 }
 
-.current {
-  color: var(--hover-button);
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-.current::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  left: 0;
-  bottom: 0;
-  border-radius: 2px;
-  background-color: var(--hover-button);
-}
-
 .header-cont {
   color: var(--title-color);
   list-style-type: none;
   font-size: 16px;
   letter-spacing: 0.02em;
   line-height: 1.5;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   margin-left: auto;
 }
@@ -506,7 +488,7 @@ p {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--accent-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
@@ -951,6 +933,10 @@ p {
 
 /* MEDIA */
 @media screen and (max-width: 767px) {
+  .header-main {
+    padding-top: 25px;
+    padding-bottom: 23px;
+  }
   .header-list-mobile-hidden {
     display: none;
   }
@@ -1037,6 +1023,10 @@ p {
   .customers-lists {
     flex-wrap: wrap;
   }
+  .team-social-mobile-menu {
+    gap: 56px;
+    justify-content: normal;
+  }
   .footer-right {
     margin-top: 72px;
   }
@@ -1063,10 +1053,14 @@ p {
   }
   .footer-form-input {
     margin-right: unset;
-    width: 398px;
-    border-color: var(--color-icon-customer);
+    max-width: 398px;
+    border-color: var(--title-color);
+  }
+  .footer-form-input::placeholder {
+    color: var(--color-icon-customer);
   }
 }
+
 @media screen and (max-width: 1199px) {
   .about {
     display: none;
@@ -1074,9 +1068,17 @@ p {
   .header-cont {
     flex-direction: column;
     row-gap: 12px;
+    font-size: 12px;
+    color: var(--title-color);
+    letter-spacing: 0.04;
+    line-height: 1.1em;
   }
   .header-emeil {
     margin-right: unset;
+    font-size: 12px;
+    color: var(--title-color);
+    letter-spacing: 0.04;
+    line-height: 1.1em;
   }
 
   .benefits-lists {
@@ -1086,6 +1088,11 @@ p {
   .benefits-icon-list {
     display: none;
   }
+  .benefits-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+  }
   .team-lists {
     justify-content: center;
     row-gap: 72px;
@@ -1094,18 +1101,39 @@ p {
   .customers-lists {
     flex-wrap: wrap;
   }
+  /* .footer {
+    padding-left: 108px;
+  } */
+  .footer-left {
+    margin-right: 24px;
+  }
   .footer-main {
     flex-wrap: wrap;
+    /* justify-content: center; */
   }
   .footer-form {
     margin-left: unset;
     margin-top: 72px;
   }
+  .footer-form-input {
+    border-color: var(--title-color);
+  }
+  .footer-form-input::placeholder {
+    color: var(--color-icon-customer);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-main {
+    padding-left: 108px;
+  }
+  .cards {
+    row-gap: 72px;
+  }
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 428px;
+    max-width: 428px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1113,16 +1141,40 @@ p {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
+
   .mobile-menu-open {
     display: none;
+  }
+  .header-list {
+    display: flex;
+    align-items: center;
+  }
+  .header-cont {
+    display: flex;
+  }
+  .current {
+    color: var(--hover-button);
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .current::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    border-radius: 2px;
+    background-color: var(--hover-button);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1158px;
+    max-width: 1158px;
   }
 }
 /* MEDIA */

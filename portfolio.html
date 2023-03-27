@@ -22,19 +22,94 @@
           <a class="logotype header-logo" href="./index.html"
             ><span class="logo-accent">Web</span>Studio</a
           >
-          <ul class="header-list">
+          <ul class="header-list header-list-mobile-hidden">
             <li class="header-menu link-decor">
               <a class="header-link" href="./index.html">Studio</a>
             </li>
             <li class="header-menu link-decor">
-              <a class="header-link current" href="#">Portfolio</a>
+              <a class="header-link current" href="./portfolio.html"
+                >Portfolio</a
+              >
             </li>
             <li class="header-menu link-decor">
               <a class="header-link" href="#">Contacts</a>
             </li>
           </ul>
         </nav>
-        <ul class="header-cont">
+        <button type="button" class="mobile-menu-open js-open-menu">
+          <svg width="32px" height="22px" class="molile-menu-open-icon">
+            <use href="./images/sprite.svg#menu-hamburger"></use>
+          </svg>
+        </button>
+
+        <div class="container mobile-menu js-menu-container">
+          <button class="molile-menu-close js-close-menu">
+            <svg class="molile-menu-close-icon" width="8px" height="8px">
+              <use href="./images/sprite.svg#icon-close-modal"></use>
+            </svg>
+          </button>
+          <ul class="header-list mobile-menu-list">
+            <li class="header-menu link-decor">
+              <a class="header-link current" href="./index.html">Studio</a>
+            </li>
+            <li class="header-menu link-decor">
+              <a class="header-link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="header-menu link-decor">
+              <a class="header-link" href="#">Contacts</a>
+            </li>
+          </ul>
+          <div class="mobile-menu-contacts">
+            <ul class="header-cont">
+              <li class="header-telefon link-decor">
+                <a
+                  class="header-tel header-communication"
+                  href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="header-emeil link-decor">
+                <a
+                  class="header-mail header-communication"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="team-social link-decor">
+              <li class="team-social-item">
+                <a class="team-social-link" href="">
+                  <svg class="team-social-icon" width="16" height="16px">
+                    <use href="./images/sprite.svg#icon-instagram-2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-social-item">
+                <a class="team-social-link" href="">
+                  <svg class="team-social-icon" width="16" height="16px">
+                    <use href="./images/sprite.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-social-item">
+                <a class="team-social-link" href="">
+                  <svg class="team-social-icon" width="16px" height="16px">
+                    <use href="./images/sprite.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-social-item">
+                <a class="team-social-link" href="">
+                  <svg class="team-social-icon" width="16" height="16px">
+                    <use href="./images/sprite.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="header-cont header-cont-mobile-hidden">
           <li class="header-emeil">
             <a
               class="header-mail header-communication"
@@ -345,5 +420,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
