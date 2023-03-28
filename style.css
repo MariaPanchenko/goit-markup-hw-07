@@ -222,7 +222,7 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('./images/people-office1.jpg');
+    url('../images/people-office-mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -931,6 +931,20 @@ p {
 }
 /* modal-form */
 
+/* MEDIA-PHOTO */
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .sec-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('./images/people-office-mobile@2x.jpg');
+  }
+}
+
+/* MEDIA-PHOTO */
 /* MEDIA */
 @media screen and (max-width: 767px) {
   .header-main {
@@ -1144,6 +1158,14 @@ p {
     max-width: 768px;
   }
 
+  .sec-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('./images/people-office-tablet.jpg');
+  }
+
   .mobile-menu-open {
     display: none;
   }
@@ -1172,9 +1194,40 @@ p {
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .sec-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('./images/people-office-tablet@2x.jpg');
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1158px;
+  }
+  .sec-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('./images/people-office-desctop.jpg');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .sec-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('./images/people-office-desctop@2x.jpg');
   }
 }
 /* MEDIA */
