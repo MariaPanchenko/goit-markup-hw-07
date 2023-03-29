@@ -944,6 +944,16 @@ p {
 
 /* MEDIA-PHOTO */
 /* MEDIA */
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .modal-window {
+    width: 310px;
+    height: auto;
+  }
+  .modal-form-checkbox-descrp {
+    font-size: 8px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .header-main {
     padding-top: 25px;
@@ -1157,6 +1167,9 @@ p {
     max-width: 428px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .modal-window {
+    width: 392px;
   }
 }
 
